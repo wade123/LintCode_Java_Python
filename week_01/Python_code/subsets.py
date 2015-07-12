@@ -4,7 +4,6 @@ class Solution:
     @return: A list of lists. See example.
     """
     def subsets(self, S):
-        # write your code here
         if not S:
         	return []
         result = []
@@ -18,3 +17,8 @@ class Solution:
     		return
     	self.helper(S, lis, result, index + 1)
     	self.helper(S, lis + [S[index]], result, index + 1)
+
+if __name__ == '__main__':
+    test = Solution()
+    S = [1,2,3]
+    print test.subsets(S)
