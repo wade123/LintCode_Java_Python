@@ -6,9 +6,9 @@ class Solution:
     """
     def permuteUnique(self, nums):
         if not nums:
-        	return []
+            return []
         if len(nums) == 1:
-        	return [[nums[0]]]
+            return [[nums[0]]]
         result = []
         added = []
         for i in xrange(len(nums)):
@@ -45,6 +45,6 @@ class SolutionTwo:
                     visited[i] = 0
 
 if __name__ == '__main__':
-	test = Solution()
-	nums = [3, 2, 2]
-	print test.permuteUnique(nums)
+    test = Solution()
+    nums = [3, 2, 2]
+    print test.permuteUnique(nums)

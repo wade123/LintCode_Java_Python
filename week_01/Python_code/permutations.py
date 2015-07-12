@@ -6,13 +6,13 @@ class Solution:
     """
     def permute(self, nums):
         if not nums:
-        	return []
+            return []
         if len(nums) == 1:
-        	return [[nums[0]]]
+            return [[nums[0]]]
         result = []
         for i in xrange(len(nums)):
-        	for subPermutation in self.permute(nums[:i] + nums[i + 1:]):
-        		result.append([nums[i]] + subPermutation)
+            for subPermutation in self.permute(nums[:i] + nums[i + 1:]):
+                result.append([nums[i]] + subPermutation)
         return result
 
 '''Version 2: JiuZhang recursion style'''
@@ -36,6 +36,6 @@ class SolutionTwo:
             lis.pop()
 
 if __name__ == '__main__':
-	test = Solution()
-	nums = [3, 2, 1]
-	print test.permute(nums)
+    test = Solution()
+    nums = [3, 2, 1]
+    print test.permute(nums)
