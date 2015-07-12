@@ -15,8 +15,10 @@ class Solution:
                     return temp
         return -1
 
-if __name__ == '__main__':
+def main():
     test = Solution()
     source = 'abcdabcdefg'
     target = 'bcde'
     print test.strStr(source, target)
+if __name__ == '__main__':
+    main()

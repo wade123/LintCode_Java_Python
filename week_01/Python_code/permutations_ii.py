@@ -44,7 +44,9 @@ class SolutionTwo:
                     lis.pop()
                     visited[i] = 0
 
-if __name__ == '__main__':
+def main():
     test = Solution()
     nums = [3, 2, 2]
     print test.permuteUnique(nums)
+if __name__ == '__main__':
+    main()

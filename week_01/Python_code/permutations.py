@@ -35,7 +35,9 @@ class SolutionTwo:
             self.helper(result, lis, nums)
             lis.pop()
 
-if __name__ == '__main__':
+def main():
     test = Solution()
     nums = [3, 2, 1]
     print test.permute(nums)
+if __name__ == '__main__':
+    main()
