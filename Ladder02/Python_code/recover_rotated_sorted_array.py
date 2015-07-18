@@ -10,6 +10,7 @@ class Solution:
         end = len(nums) - 1
         while start + 1 < end:
             mid = start + (end - start) / 2
+            print mid
             if nums[mid] > nums[end]:
                 start = mid
             elif nums[mid] < nums[start]:
@@ -17,6 +18,7 @@ class Solution:
             else:
                 end -= 1
         pivot = start if nums[start] < nums[end] else end
+        print 'p', pivot
         self.reverse(nums, pivot, len(nums) - 1)
         self.reverse(nums, 0, pivot - 1)
         self.reverse(nums, 0, len(nums) - 1)
@@ -28,7 +30,7 @@ class Solution:
 
 def main():
     test = Solution()
-    nums = [1, 1, 1, 1, 1, 1, 1, 1, 1, -1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+    nums = [1, 1, 1, -1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
     test.recoverRotatedSortedArray(nums)
 
 if __name__ == '__main__':
