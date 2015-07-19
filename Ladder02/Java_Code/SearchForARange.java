@@ -18,18 +18,15 @@ public class SearchForARange {
             int mid = start + (end - start) / 2;
             if (A.get(mid) >= target) {
                 end = mid;
-            }
-            else {
+            } else {
                 start = mid;
             }
         }
         if (A.get(start) == target) {
             leftBound = start;
-        }
-        else if (A.get(end) == target) {
+        } else if (A.get(end) == target) {
             leftBound = end;
-        }
-        else {
+        } else {
             result.add(-1);
             result.add(-1);
             return result;
@@ -42,8 +39,7 @@ public class SearchForARange {
             int middle = low + (high - low) / 2;
             if (A.get(middle) <= target) {
                 low = middle;
-            }
-            else {
+            } else {
                 high = middle;
             }
         }

@@ -18,8 +18,7 @@ public class FirstBadVersion {
             mid = start + (end - start) / 2;
             if (VersionControl.isBadVersion(mid)) {
                 end = mid;
-            }
-            else {
+            } else {
                 start = mid;
             }
         }

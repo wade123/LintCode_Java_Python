@@ -15,18 +15,15 @@ public class BinarySearch {
             mid = start + (end - start)/2;
             if (nums[mid] >= target) {
                 end = mid;
-            }
-            else {
+            } else {
                 start = mid;
             }
         }
         if (nums[start] == target) {
             return start;
-        }
-        else if (nums[end] == target) {
+        } else if (nums[end] == target) {
             return end;
-        }
-        else {
+        } else {
             return -1;
         }
     }
