@@ -30,9 +30,12 @@ public class JumpGameTwo {
             if (i > lastStep) {
                 step++;
                 lastStep = reach;
+                if (lastStep >= A.length - 1) {
+                    return step;
+                }
             }
             reach = Math.max(reach, A[i] + i);
         }
-        return step;
+        return -1;
     }
 }
