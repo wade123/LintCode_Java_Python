@@ -8,15 +8,9 @@ class MergeSortedArrayTwo {
         if ((A == null || A.size() == 0) && (B == null || B.size() == 0)) {
             return result;
         } else if (A == null || A.size() == 0) {
-            for (int number : B) {
-                result.add(number);
-            }
-            return result;
+            return B;
         } else if (B == null || B.size() == 0) {
-            for (int number : A) {
-                result.add(number);
-            }
-            return result;
+            return A;
         }
         int p = 0;
         int q = 0;
